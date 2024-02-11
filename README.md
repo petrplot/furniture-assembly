@@ -1,4 +1,4 @@
 # furniture-assembly
-```
-$ https://petrplot.github.io/furniture-assembly/
-```
+
+https://petrplot.github.io/furniture-assembly/
+
