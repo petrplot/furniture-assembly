@@ -49,3 +49,36 @@ sliderDots.forEach((dot,index)=>{
         sliderActive(index)
     })
 })
+
+//swipe
+
+document.querySelector('.slider').addEventListener("touchstart", handleTouchStart, false);
+document.querySelector('.slider').addEventListener("touchmove", handleTouchMove, false);
+
+let x1 = 0
+
+function handleTouchStart(event) {
+    const oneTouch = event.touches[0];
+    x1 = oneTouch.clientX
+}
+
+
+function handleTouchMove(event) {
+    if(!x1){
+        return false
+    }
+    let x2 = event.touches[0].clientX
+    
+    let xDiff = x2 - x1
+
+    if(xDiff > 0){
+        sliderPrev()
+    }
+    else{
+        sliderNext()
+    }
+    x1=null
+}
+
+
+
